@@ -1,0 +1,1335 @@
+![male-doctor-working-digital-tablet](https://github.com/user-attachments/assets/b4227b24-89a0-4934-8ed6-d5ae8136e320)
+<img width="350" height="350" alt="happy-smiling-male-doctor-w![5183184](https://github.com/user-attachments/assets/eef2e612-d00a-4194-82b1-724719f57842)
+ith-hand-present-something-empty-space-standing-isolate-on-transparent-background-png" src="https://github.com/user-attachments/assets/9961af23-9062-4b32-b023-17007e20c728" />
+![3732593](https://github.com/user-attachments/assets/c603a58c-4ec4-465b-ac8a-0718ef0278bb)
+[index.html](https://github.com/user-attachments/files/25067449/index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalHub - Your Health, Our Priority</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0891B2;
+            --secondary: #06B6D4;
+            --accent: #3B82F6;
+            --dark: #0F172A;
+            --light: #F0F9FF;
+            --white: #FFFFFF;
+            --gray: #64748B;
+            --success: #10B981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==================== SECTION 1: HERO ==================== */
+        .hero-section {
+            background: linear-gradient(135deg, #0891B2 0%, #06B6D4 50%, #3B82F6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent 0%, var(--white) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
+
+        .hero-headline {
+            font-family: 'Merriweather', serif;
+            font-size: clamp(36px, 6vw, 68px);
+            font-weight: 900;
+            line-height: 1.2;
+            color: white;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-headline span {
+            color: #FDE047;
+            display: block;
+            font-style: italic;
+        }
+
+        .hero-subtext {
+            font-size: clamp(16px, 2vw, 22px);
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 50px;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta-button {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 24px 70px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(8, 145, 178, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .hero-cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-cta-button:hover::before {
+            left: 100%;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            opacity: 0.9;
+        }
+
+        .trust-item {
+            color: white;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-icon {
+            font-size: 24px;
+        }
+
+        /* ==================== SECTION 2: ABOUT US ==================== */
+        .about-section {
+            padding: 120px 20px;
+            background: linear-gradient(to bottom, var(--white) 0%, var(--light) 100%);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: clamp(32px, 5vw, 52px);
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .section-title span {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 2vw, 20px);
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 70px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(8, 145, 178, 0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(8, 145, 178, 0.15);
+            border-color: rgba(8, 145, 178, 0.2);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(8, 145, 178, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotate(10deg) scale(1.1);
+            box-shadow: 0 15px 40px rgba(8, 145, 178, 0.4);
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            font-family: 'Merriweather', serif;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .about-cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .about-cta-button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 22px 60px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 15px 50px rgba(8, 145, 178, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .about-cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(8, 145, 178, 0.4);
+        }
+
+        /* ==================== SECTION 3: REVIEWS & FAQ ==================== */
+        .reviews-faq-section {
+            padding: 100px 20px;
+            background: var(--white);
+        }
+
+        .reviews-container {
+            margin-bottom: 100px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .review-card {
+            background: var(--light);
+            padding: 40px 35px;
+            border-radius: 20px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(8, 145, 178, 0.05);
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(8, 145, 178, 0.12);
+        }
+
+        .stars {
+            color: #FDB022;
+            font-size: 22px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .review-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 22px;
+            box-shadow: 0 5px 15px rgba(8, 145, 178, 0.3);
+        }
+
+        .reviewer-info h4 {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .reviewer-info p {
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(8, 145, 178, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 10px 35px rgba(8, 145, 178, 0.12);
+            border-color: rgba(8, 145, 178, 0.2);
+        }
+
+        .faq-question {
+            padding: 28px 35px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .faq-question:hover {
+            background: var(--light);
+        }
+
+        .faq-toggle {
+            font-size: 30px;
+            color: var(--primary);
+            transition: all 0.4s ease;
+            font-weight: 300;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--light);
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+            background: var(--primary);
+            color: white;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            padding: 0 35px;
+            background: var(--light);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+            padding: 0 35px 28px;
+        }
+
+        .faq-answer p {
+            color: var(--gray);
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        /* ==================== MODAL ==================== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            margin: 3% auto;
+            padding: 55px 50px;
+            border-radius: 25px;
+            width: 90%;
+            max-width: 650px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+            animation: modalSlideIn 0.5s ease-out;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .close {
+            color: var(--gray);
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 38px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close:hover {
+            color: var(--dark);
+            background: var(--light);
+            transform: rotate(90deg);
+        }
+
+        .modal-title {
+            font-family: 'Merriweather', serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-right: 50px;
+        }
+
+        .modal-subtitle {
+            font-size: 16px;
+            color: var(--gray);
+            margin-bottom: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 15px;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--light);
+            box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 15px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(8, 145, 178, 0.4);
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, #1E293B 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+
+        footer h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        .footer-links {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 20px;
+                min-height: auto;
+            }
+
+            .hero-cta-button {
+                padding: 20px 50px;
+                font-size: 16px;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 40px 25px;
+                margin: 10% auto;
+            }
+
+            .modal-title {
+                font-size: 30px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== SECTION 1: HERO ==================== -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">✨ Trusted By 50,000+ Patients</div>
+            
+            <h1 class="hero-headline">
+                Your Health Journey<br>
+                <span>Starts Here Today</span>
+            </h1>
+            
+            <p class="hero-subtext">
+                Experience world-class medical care with board-certified specialists, 
+                24/7 telemedicine support, and personalized treatment plans designed just for you.
+            </p>
+            
+            <button class="hero-cta-button" onclick="openModal()">START NOW</button>
+            
+            <div class="trust-badges">
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    <span>Board Certified Doctors</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    <span>24/7 Available</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    <span>HIPAA Compliant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2: ABOUT US ==================== -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Who We Are</div>
+                <h2 class="section-title">
+                    Healthcare That Puts <span>You First</span>
+                </h2>
+                <p class="section-subtitle">
+                    At MedicalHub, we combine cutting-edge technology with compassionate care 
+                    to deliver healthcare experiences that truly make a difference in your life.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏥</div>
+                    <h3 class="feature-title">Expert Medical Team</h3>
+                    <p class="feature-description">
+                        Our network of board-certified physicians, specialists, and healthcare professionals 
+                        brings decades of combined experience to your care. Every doctor is thoroughly vetted 
+                        and committed to excellence.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💊</div>
+                    <h3 class="feature-title">Comprehensive Care</h3>
+                    <p class="feature-description">
+                        From routine checkups to specialized treatments, we offer complete medical services 
+                        under one roof. Primary care, diagnostics, lab work, and specialist consultations 
+                        all seamlessly integrated.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Telemedicine Access</h3>
+                    <p class="feature-description">
+                        Connect with healthcare providers from anywhere, anytime. Our secure video 
+                        consultations bring the doctor's office to you, with same-day appointments 
+                        available 24/7.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔬</div>
+                    <h3 class="feature-title">Advanced Diagnostics</h3>
+                    <p class="feature-description">
+                        State-of-the-art diagnostic equipment and in-house laboratory services ensure 
+                        accurate results fast. From bloodwork to imaging, we have the technology to 
+                        get you answers quickly.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">❤️</div>
+                    <h3 class="feature-title">Personalized Treatment</h3>
+                    <p class="feature-description">
+                        No two patients are alike. We create customized treatment plans based on your 
+                        unique health profile, lifestyle, and goals. Your care is as individual as you are.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy & Security</h3>
+                    <p class="feature-description">
+                        Your medical information is protected with bank-level encryption and HIPAA-compliant 
+                        systems. We take your privacy seriously and never share your data without explicit consent.
+                    </p>
+                </div>
+            </div>
+
+            <div class="stats-row fade-in">
+                <div class="stat-item">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Patients Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Medical Specialists</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+
+            <div class="about-cta fade-in">
+                <button class="about-cta-button" onclick="openModal()">START NOW</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3: REVIEWS & FAQ ==================== -->
+    <section class="reviews-faq-section">
+        <div class="container">
+            <!-- Reviews -->
+            <div class="reviews-container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">Patient Stories</div>
+                    <h2 class="section-title">
+                        What Our <span>Patients Say</span>
+                    </h2>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">
+                            "MedicalHub changed my life. After struggling with chronic pain for years, 
+                            their specialists finally diagnosed the root cause and created a treatment 
+                            plan that actually works. I'm pain-free for the first time in a decade!"
+                        </p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">M</div>
+                            <div class="reviewer-info">
+                                <h4>Michael Rodriguez</h4>
+                                <p>Patient since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">
+                            "The telemedicine service is incredible. As a busy mom, being able to 
+                            consult with a doctor from home while my kids nap is a game-changer. 
+                            The doctors are thorough, caring, and truly listen."
+                        </p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">S</div>
+                            <div class="reviewer-info">
+                                <h4>Sarah Chen</h4>
+                                <p>Patient since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">
+                            "I was nervous about switching healthcare providers, but MedicalHub made 
+                            the transition seamless. They coordinated with my previous doctor, got all 
+                            my records, and my new physician knew my full history on day one."
+                        </p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">J</div>
+                            <div class="reviewer-info">
+                                <h4>James Thompson</h4>
+                                <p>Patient since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">
+                            "Their preventive care program literally saved my life. During a routine 
+                            screening, they caught early signs of a serious condition. Thanks to their 
+                            vigilance and quick action, I got treatment immediately."
+                        </p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">L</div>
+                            <div class="reviewer-info">
+                                <h4>Lisa Johnson</h4>
+                                <p>Patient since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">
+                            "As someone with diabetes, having a coordinated care team makes all the 
+                            difference. My endocrinologist, nutritionist, and primary care doctor all 
+                            communicate seamlessly. My A1C has never been better!"
+                        </p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">R</div>
+                            <div class="reviewer-info">
+                                <h4>Robert Martinez</h4>
+                                <p>Patient since 2019</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card fade-in">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">
+                            "The mental health support has been outstanding. Finding a therapist who 
+                            accepts my insurance and has availability was always impossible before. 
+                            MedicalHub connected me with someone perfect within 48 hours."
+                        </p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">E</div>
+                            <div class="reviewer-info">
+                                <h4>Emily Davis</h4>
+                                <p>Patient since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="faq-container">
+                <div class="section-header fade-in">
+                    <div class="section-badge">Got Questions?</div>
+                    <h2 class="section-title">
+                        Frequently Asked <span>Questions</span>
+                    </h2>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I schedule my first appointment?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Getting started is simple! Click the "Start Now" button to fill out our 
+                            quick registration form. Once submitted, our team will contact you within 
+                            24 hours to schedule your first appointment at a time that works for you. 
+                            You can choose between in-person visits at one of our locations or a 
+                            telemedicine consultation from the comfort of your home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you accept my insurance?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We accept most major insurance plans including Medicare and Medicaid. 
+                            During your registration, you'll provide your insurance information, and 
+                            we'll verify your coverage before your first appointment. If you don't 
+                            have insurance, we offer competitive self-pay rates and flexible payment 
+                            plans to make quality healthcare accessible to everyone.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What services do you offer?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We provide comprehensive healthcare including primary care, urgent care, 
+                            specialist consultations (cardiology, dermatology, orthopedics, etc.), 
+                            women's health, pediatrics, mental health services, preventive care, 
+                            chronic disease management, diagnostic testing, lab work, and prescription 
+                            management. Basically, everything you need for complete healthcare in one place.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does telemedicine work?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Our telemedicine platform allows you to video chat with a licensed physician 
+                            using your smartphone, tablet, or computer. Simply log into your patient 
+                            portal at your appointment time, and you'll be connected with your doctor. 
+                            It's HIPAA-compliant, secure, and just as effective as an in-person visit 
+                            for many conditions. Prescriptions can be sent directly to your pharmacy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I see the same doctor every time?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Absolutely! We believe in continuity of care. When you register, you'll be 
+                            assigned a primary care physician who will become familiar with your health 
+                            history and preferences. You'll see the same doctor for all your appointments 
+                            unless you request otherwise or need to see a specialist for specific conditions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if I need urgent care after hours?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We offer 24/7 telemedicine access for urgent medical concerns. Through our 
+                            patient portal or mobile app, you can connect with an on-call physician any 
+                            time, day or night. For true emergencies, always call 911. Our after-hours 
+                            service is perfect for non-emergency situations like sudden illness, minor 
+                            injuries, or prescription refills that can't wait until morning.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I access my medical records?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Your complete medical records are available 24/7 through our secure patient 
+                            portal. You can view test results, visit summaries, medication lists, and 
+                            vaccination records anytime. You can also download or share your records 
+                            with other healthcare providers. We believe your health information should 
+                            be accessible to you whenever you need it.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you offer preventive care programs?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! We emphasize preventive care because catching health issues early saves 
+                            lives. Our programs include annual wellness exams, cancer screenings, 
+                            cardiovascular risk assessments, diabetes prevention, immunizations, and 
+                            personalized health coaching. Most preventive services are covered 100% by 
+                            insurance with no copay.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <h3>MedicalHub</h3>
+            <p>Your Health, Our Priority</p>
+            
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#hipaa">HIPAA Compliance</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            
+            <p style="margin-top: 25px;">📞 24/7 Hotline: 1-800-MEDICAL</p>
+            <p>📧 contact@medicalhub.com</p>
+            <p style="margin-top: 25px; font-size: 13px; opacity: 0.7;">
+                © 2025 MedicalHub. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL ==================== -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title">Start Your Health Journey</h2>
+            <p class="modal-subtitle">Fill out the form below and we'll contact you within 24 hours</p>
+            
+            <form action="https://formsubmit.co/abc380264@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="🏥 New MedicalHub Patient Registration">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://abc380264-cyber.github.io/medicalhub/#success">
+                <input type="text" name="_honey" style="display:none">
+                
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="Full_Name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="Email" required placeholder="john@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="Phone" required placeholder="+1 (555) 123-4567">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Date of Birth</label>
+                    <input type="date" id="age" name="Date_of_Birth">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Reason for Visit *</label>
+                    <select id="reason" name="Reason_for_Visit" required>
+                        <option value="">Select a reason</option>
+                        <option value="General Checkup">General Checkup</option>
+                        <option value="Specific Symptoms">Specific Symptoms</option>
+                        <option value="Follow-up">Follow-up Appointment</option>
+                        <option value="Specialist Referral">Specialist Referral</option>
+                        <option value="Preventive Care">Preventive Care</option>
+                        <option value="Mental Health">Mental Health</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" name="Additional_Details" placeholder="Tell us more about your health concerns or questions..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="insurance">Do you have insurance?</label>
+                    <select id="insurance" name="Insurance_Status">
+                        <option value="">Select an option</option>
+                        <option value="Yes - Private">Yes - Private Insurance</option>
+                        <option value="Yes - Medicare">Yes - Medicare</option>
+                        <option value="Yes - Medicaid">Yes - Medicaid</option>
+                        <option value="No">No Insurance (Self-Pay)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+            
+            <p style="text-align: center; margin-top: 25px; color: var(--gray); font-size: 13px;">
+                🔒 Your information is secure and HIPAA compliant
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openModal() {
+            document.getElementById('contactModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Success Message
+        window.addEventListener('load', function() {
+            if (window.location.hash === '#success') {
+                alert('✅ Thank you for registering! Our team will contact you within 24 hours to schedule your appointment.');
+                history.replaceState(null, null, ' ');
+            }
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
